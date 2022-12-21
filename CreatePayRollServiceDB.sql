@@ -20,3 +20,5 @@ select * from EmployeePayRoll;
 ---------------Uc-05 Reading employee data-----------
 select * from EmployeePayRoll where Id=3
 select * from EmployeePayRoll where StartDate between CAST('2021-01-01' AS DATE) AND GETDATE() ;
+-------------Uc-06 add column to employee data--------
+alter table EmployeePayRoll add Gender char(1);
