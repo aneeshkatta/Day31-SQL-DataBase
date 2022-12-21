@@ -1,12 +1,9 @@
--------UC-01-Creating database---------
-create database Payroll_Service;
-use model
 ---------UC-02-Creating table-----------
 create table EmployeePayRoll
 (
 	Id int  identity(1,1)  primary key,
-    Name varchar(255),
-    Address varchar(255),
-    Salary float,
+Â  Â  Name varchar(255),
+Â  Â  Address varchar(255),
+Â  Â  Salary float,
 	StartDate date
 );
