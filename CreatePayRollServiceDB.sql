@@ -23,4 +23,15 @@ select * from EmployeePayRoll where StartDate between CAST('2021-01-01' AS DATE)
 -------------Uc-06 add column to employee data--------
 alter table EmployeePayRoll add Gender char(1);
 update EmployeePayRoll set Gender='M';
-insert into EmployeePayRoll values('kavitha','hyd',43535,'2012-07-01','F'),('ramya','hyd',23488,'2022-08-20','F');
+insert into EmployeePayRoll values('kavitha','hyd',43535,'2017-07-01','F'),('ramya','hyd',43488,'2022-08-20','F');
+--------UC 7 Find sum ,average, min, max and number of gender-----
+select sum(salary) from EmployeePayRoll 
+select sum(salary) as Totalsalary from EmployeePayRoll 
+select sum(salary) from EmployeePayRoll group by Gender;
+select sum(salary) as Totalsalary,Gender from EmployeePayRoll group by Gender;
+select max(salary) as Totalsalary,Gender from EmployeePayRoll group by Gender;
+select * from EmployeePayRoll where salary=(select Max(salary) as totalsalary from employeepayroll where gender='F' )
+select * from EmployeePayRoll where salary=(select Max(salary) as totalsalary from employeepayroll where gender='M' )
+select * from EmployeePayRoll where salary in (select Max(salary) as totalsalary from employeepayroll group by gender)
+select avg(salary) from EmployeePayRoll  group by gender
+select avg(salary) as Totalsalary,Gender from EmployeePayRoll group by Gender;
