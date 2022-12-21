@@ -12,5 +12,8 @@ create table EmployeePayRoll
 );
 -----------UC-03 payroll service database as part of CURD Operation - Use payroll_service database-----------
 insert into EmployeePayRoll values('Ravi','hyd',45698.2,CAST('2021-01-01' as date));
-insert into EmployeePayRoll (Salary ,Name,StartDate,Address) values(47523,'Raj','2021-02-02','mumbai');
+insert into EmployeePayRoll (Salary ,Name,StartDate,Address) values(47523,'Rakesh','2021-02-02','mumbai');
+insert into EmployeePayRoll (Salary ,Name,StartDate,Address) values(47513,'Raj','2021-02-02','mumbai');
+insert into EmployeePayRoll (Salary ,Name,StartDate,Address) values(47983,'Ravinder','2021-03-02','mumbai');
+-------------Uc-04 Reading table data-----------
 select * from EmployeePayRoll;
