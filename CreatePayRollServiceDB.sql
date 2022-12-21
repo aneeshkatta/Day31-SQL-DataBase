@@ -15,5 +15,8 @@ insert into EmployeePayRoll values('Ravi','hyd',45698.2,CAST('2021-01-01' as dat
 insert into EmployeePayRoll (Salary ,Name,StartDate,Address) values(47523,'Rakesh','2021-02-02','mumbai');
 insert into EmployeePayRoll (Salary ,Name,StartDate,Address) values(47513,'Raj','2021-02-02','mumbai');
 insert into EmployeePayRoll (Salary ,Name,StartDate,Address) values(47983,'Ravinder','2021-03-02','mumbai');
--------------Uc-04 Reading table data-----------
+----------------Uc-04 Reading table data-----------
 select * from EmployeePayRoll;
+---------------Uc-05 Reading employee data-----------
+select * from EmployeePayRoll where Id=3
+select * from EmployeePayRoll where StartDate between CAST('2021-01-01' AS DATE) AND GETDATE() ;
