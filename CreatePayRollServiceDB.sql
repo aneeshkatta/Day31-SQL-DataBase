@@ -22,3 +22,5 @@ select * from EmployeePayRoll where Id=3
 select * from EmployeePayRoll where StartDate between CAST('2021-01-01' AS DATE) AND GETDATE() ;
 -------------Uc-06 add column to employee data--------
 alter table EmployeePayRoll add Gender char(1);
+update EmployeePayRoll set Gender='M';
+insert into EmployeePayRoll values('kavitha','hyd',43535,'2012-07-01','F'),('ramya','hyd',23488,'2022-08-20','F');
