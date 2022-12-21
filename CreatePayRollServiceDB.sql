@@ -1,5 +1,6 @@
 -------UC-01-Creating database---------
 create database Payroll_Service;
+<<<<<<< HEAD
 use model
 ---------UC-02-Creating table-----------
 create table EmployeePayRoll
@@ -10,3 +11,6 @@ create table EmployeePayRoll
     Salary float,
 	StartDate date
 );
+=======
+use Payroll_Service;
+>>>>>>> uc1
