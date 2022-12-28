@@ -35,3 +35,12 @@ select * from EmployeePayRoll where salary=(select Max(salary) as totalsalary fr
 select * from EmployeePayRoll where salary in (select Max(salary) as totalsalary from employeepayroll group by gender)
 select avg(salary) from EmployeePayRoll  group by gender
 select avg(salary) as Totalsalary,Gender from EmployeePayRoll group by Gender;
+--------UC 8-------------
+alter table EmployeePayRoll add MobileNo bigint;
+alter table EmployeePayRoll  drop column Department ;
+alter table EmployeePayRoll  ADD Department varchar(255) ;
+alter table EmployeePayRoll drop column Address;
+alter table EmployeePayRoll add Address varchar(255) default 'Mumbai' with values;
+update EmployeePayRoll set MobileNo='987654321';
+update EmployeePayRoll set Department='IT';
+select * from EmployeePayRoll
