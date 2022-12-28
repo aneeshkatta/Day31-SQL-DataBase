@@ -35,7 +35,7 @@ select * from EmployeePayRoll where salary=(select Max(salary) as totalsalary fr
 select * from EmployeePayRoll where salary in (select Max(salary) as totalsalary from employeepayroll group by gender)
 select avg(salary) from EmployeePayRoll  group by gender
 select avg(salary) as Totalsalary,Gender from EmployeePayRoll group by Gender;
---------UC 8-------------
+--------UC-8 Ability to extend employee_payroll data-------------
 alter table EmployeePayRoll add MobileNo bigint;
 alter table EmployeePayRoll  drop column Department ;
 alter table EmployeePayRoll  ADD Department varchar(255) ;
@@ -44,3 +44,5 @@ alter table EmployeePayRoll add Address varchar(255) default 'Mumbai' with value
 update EmployeePayRoll set MobileNo='987654321';
 update EmployeePayRoll set Department='IT';
 select * from EmployeePayRoll
+--------UC-9 Ability to extend employee_payroll table to have Basic Pay,Deductions, Taxable Pay,Income Tax, Net Pay-------------
+alter table EmployeePayRoll add [Basic Pay] float, Deductions float,[Taxable Pay] float ,[Income Tax] float,[Net Pay] float;
