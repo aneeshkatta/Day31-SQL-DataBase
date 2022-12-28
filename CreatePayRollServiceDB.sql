@@ -44,5 +44,10 @@ alter table EmployeePayRoll add Address varchar(255) default 'Mumbai' with value
 update EmployeePayRoll set MobileNo='987654321';
 update EmployeePayRoll set Department='IT';
 select * from EmployeePayRoll
---------UC-9 Ability to extend employee_payroll table to have Basic Pay,Deductions, Taxable Pay,Income Tax, Net Pay-------------
+-----------UC-9 Ability to extend employee_payroll table to have Basic Pay,Deductions, Taxable Pay,Income Tax, Net Pay-------------
 alter table EmployeePayRoll add [Basic Pay] float, Deductions float,[Taxable Pay] float ,[Income Tax] float,[Net Pay] float;
+----------uc10-----------------
+INSERT INTO EmployeePayroll VALUES('Teressa',45698.2,'2022/08/12','M','963852741','hyd','Finance',20000,1000,250,100,18650);
+INSERT INTO EmployeePayroll VALUES('Teressa',45698.2,'2022/08/12','M','963852741','hyd','marketing',20000,1000,250,100,18650);
+
+
