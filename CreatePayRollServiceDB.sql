@@ -49,5 +49,8 @@ alter table EmployeePayRoll add [Basic Pay] float, Deductions float,[Taxable Pay
 ----------uc10-----------------
 INSERT INTO EmployeePayroll VALUES('Teressa',45698.2,'2022/08/12','M','963852741','hyd','Finance',20000,1000,250,100,18650);
 INSERT INTO EmployeePayroll VALUES('Teressa',45698.2,'2022/08/12','M','963852741','hyd','marketing',20000,1000,250,100,18650);
-
-
+update EmployeePayRoll set [Basic Pay]=20000;
+update EmployeePayRoll set [Taxable Pay]=250;
+update EmployeePayRoll set [Deductions]=1000;
+update EmployeePayRoll set [Income Tax] =100;
+update EmployeePayRoll set [Net Pay]=18650;
